@@ -65,5 +65,7 @@ public class App
         System.out.println("Vet name:" + vetReference.name);
         System.out.println("Vet specialization:" + vetReference.specialization);
 
+        ownerReference.feeding(petReference, foodReference);
+        ownerReference.playing(petReference, activityReference);
     }
 }
