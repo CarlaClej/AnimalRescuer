@@ -6,6 +6,12 @@ public class Owner {
     int money;
 
     public void feeding(Animal animal, Food food) {
+        if (food.name.equals(animal.favouriteFood)){
+            animal.happinessLevel +=2;
+            animal.hungerLevel -=1;
+        }
+        else{ animal.happinessLevel -=2;
+        }
 
         System.out.println("Hunger level before feeding: " + animal.hungerLevel);
 
@@ -18,6 +24,11 @@ public class Owner {
     }
 
     public void playing(Animal animal, Activity activity) {
+        if (activity.name.equals(animal.favouriteActivity)){
+            animal.happinessLevel += 2;
+        }
+        else { animal.happinessLevel -=2;
+        }
 
         System.out.println("Happiness level before playing: " + animal.happinessLevel);
 
