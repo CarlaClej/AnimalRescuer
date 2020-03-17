@@ -1,13 +1,8 @@
 package org.fasttrakit;
 
-public class Pet {
+public class Pet extends Animal{
 
-    String name;
-    int age;
-    int healthLevel;
-    int hungerLevel;
-    int happinessLevel;
-    String favouriteFood;
-    String favouriteActivity;
-    }
+    boolean noisy;
+
+}
 
