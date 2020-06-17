@@ -2,41 +2,41 @@ package org.fasttrakit;
 
 public class Owner {
 
-    String name;
-    int money;
+    private String name;
+    private int money;
 
     public void feeding(Animal animal, Food food) {
-        if (food.name.equals(animal.favouriteFood)){
-            animal.happinessLevel +=2;
-            animal.hungerLevel -=1;
+        if (food.getName().equals(animal.getFavouriteFood())){
+            animal.setHappinessLevel(animal.getHappinessLevel()+2);
+            animal.setHungerLevel(animal.getHungerLevel()-1);
         }
-        else{ animal.happinessLevel -=2;
+        else{animal.setHappinessLevel(-2);
         }
 
-        System.out.println("Hunger level before feeding: " + animal.hungerLevel);
+        System.out.println("Hunger level before feeding: " + animal.getHungerLevel());
 
-        animal.hungerLevel -= 1;
+        animal.setHungerLevel(-1);
 
-        System.out.println(name + " just gave some " + food.name + " food to " + animal.name );
+        System.out.println(name + " just gave some " + food.getName() + " food to " + animal.getName());
 
-        System.out.println("Hunger level after feeding: " + animal.hungerLevel);
+        System.out.println("Hunger level after feeding: " + animal.getHungerLevel());
 
     }
 
     public void playing(Animal animal, Activity activity) {
-        if (activity.name.equals(animal.favouriteActivity)){
-            animal.happinessLevel += 2;
+        if (activity.getName().equals(animal.getFavouriteActivity())){
+            animal.setHappinessLevel(+2);
         }
-        else { animal.happinessLevel -=2;
+        else { animal.setHappinessLevel(-2);
         }
 
-        System.out.println("Happiness level before playing: " + animal.happinessLevel);
+        System.out.println("Happiness level before playing: " + animal.getHappinessLevel());
 
-        animal.happinessLevel += 1;
+        animal.setHappinessLevel(+1);
 
-        System.out.println(name + " is " + activity.name + " with " + animal.name);
+        System.out.println(name + " is " + activity.getName() + " with " + animal.getName());
 
-        System.out.println("Happiness level after playing: " + animal.happinessLevel);
+        System.out.println("Happiness level after playing: " + animal.getHappinessLevel());
 
     }
 
