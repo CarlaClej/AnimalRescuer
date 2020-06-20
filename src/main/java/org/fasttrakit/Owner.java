@@ -10,12 +10,12 @@ public class Owner {
             animal.setHappinessLevel(animal.getHappinessLevel()+2);
             animal.setHungerLevel(animal.getHungerLevel()-1);
         }
-        else{animal.setHappinessLevel(-2);
+        else{animal.setHappinessLevel((animal.getHappinessLevel())-2);
         }
 
         System.out.println("Hunger level before feeding: " + animal.getHungerLevel());
 
-        animal.setHungerLevel(-1);
+        animal.setHungerLevel((animal.getHungerLevel())-1);
 
         System.out.println(name + " just gave some " + food.getName() + " food to " + animal.getName());
 
@@ -25,14 +25,14 @@ public class Owner {
 
     public void playing(Animal animal, Activity activity) {
         if (activity.getName().equals(animal.getFavouriteActivity())){
-            animal.setHappinessLevel(+2);
+            animal.setHappinessLevel((animal.getHappinessLevel())+2);
         }
-        else { animal.setHappinessLevel(-2);
+        else { animal.setHappinessLevel((animal.getHappinessLevel())-2);
         }
 
         System.out.println("Happiness level before playing: " + animal.getHappinessLevel());
 
-        animal.setHappinessLevel(+1);
+        animal.setHappinessLevel((animal.getHappinessLevel())+1);
 
         System.out.println(name + " is " + activity.getName() + " with " + animal.getName());
 
